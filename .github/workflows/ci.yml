@@ -1,21 +1,24 @@
 name: Docker Build Test CI
+
 on:
   push:
-     branches: ["main"]
+    branches: ["main"]
   pull_request:
-      branches: ["main"]
-jobs:
-    build-and-test:
-        runs-on: ubuntu-latest
+    branches: ["main"]
 
-steps:
-    - name: Checkout repository code
-      uses: actions/checkout@v4
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    # E'tibor bering: "steps:" so'zi to'g'ri "runs-on" tagida, u bilan bir xil chiziqda turishi kerak (4 ta probel ichkarida)
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
 
       - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v3
 
-    - name: Build Docker image
-      run: | 
-      docker build -t first-project:test .
-      echo "Docker image built successfully."      
+      - name: Build Docker Image
+        run: |
+          docker build -t first-project:test .
+          echo "Docker image built successfully."
