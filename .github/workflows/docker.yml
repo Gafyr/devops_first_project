@@ -1,0 +1,27 @@
+name: Docker CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t my-devops-site .
+
+      - name: Run container
+        run: |
+          docker run -d \
+            --name my-site \
+            -p 8080:80 \
+            my-devops-site
+
+      - name: Test website
+        run: curl --fail http://localhost:8080
