@@ -2,15 +2,215 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Devops loyhasi bilan tabriklayman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevOps Master Class</title>
+
     <style>
-        body { font-family: sans-serif; background-color: #f0f2f5; text-align: center; padding-top: 50px; }
-        h1 { color: #1877f2; }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .rocket {
+            font-size: 55px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 15px;
+            padding: 25px 10px;
+        }
+
+        .card .icon {
+            font-size: 30px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .success {
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        .pipeline {
+            background: #1e293b;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #334155;
+        }
+
+        .pipeline h2 {
+            margin-top: 0;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .step {
+            background: #0f172a;
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: 1px solid #475569;
+        }
+
+        .arrow {
+            color: #38bdf8;
+            font-size: 24px;
+        }
+
+        .github {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .github:hover {
+            opacity: 0.85;
+        }
+
+        .footer {
+            margin-top: 35px;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <h1>Tabrilayman 🚀</h1>
-    <p>Salom</p>
-    <p>School 21 tayyor</p>
+
+<div class="container">
+
+    <div class="rocket">🚀</div>
+
+    <h1>DevOps Master Class</h1>
+
+    <p class="subtitle">
+        Mening birinchi DevOps loyiham
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Code</h3>
+            <div class="success">✓ READY</div>
+        </div>
+
+        <div class="card">
+            <div class="icon">🐳</div>
+            <h3>Docker</h3>
+            <div class="success">✓ READY</div>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>CI/CD</h3>
+            <div class="success">✓ READY</div>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Deploy</h3>
+            <div class="success">✓ READY</div>
+        </div>
+
+    </div>
+
+    <div class="pipeline">
+
+        <h2>DevOps Pipeline</h2>
+
+        <div class="steps">
+
+            <div class="step">💻 Code</div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">🐳 Build</div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">🧪 Test</div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">🚀 Deploy</div>
+
+        </div>
+
+        <div class="success">
+            ✅ GitHub Actions muvaffaqiyatli ishladi
+        </div>
+
+        <a
+            class="github"
+            href="https://github.com/Gafyr/devops_first_project/actions"
+            target="_blank">
+            GitHub Actions →
+        </a>
+
+    </div>
+
+    <div class="footer">
+        Docker container ichida muvaffaqiyatli ishga tushdi 🚀
+    </div>
+
+</div>
+
 </body>
 </html>
